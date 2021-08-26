@@ -12,5 +12,5 @@ test.py
 **/data/src_files/*
 
 # embeddings
-models/*
+**/models/*
 
