@@ -1,0 +1,16 @@
+__pycache__/
+
+lightning_logs/
+*.log
+workspace/
+notes.txt
+test.py
+.mypy_cache/
+
+# data extracted/transformed from dataset
+**/data/graphs/*
+**/data/src_files/*
+
+# embeddings
+**/models/*
+
