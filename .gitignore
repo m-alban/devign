@@ -5,11 +5,12 @@ lightning_logs/
 workspace/
 notes.txt
 test.py
+.mypy_cache/
 
 # data extracted/transformed from dataset
-**/data/graphs/**
-**/data/src_files/**
+**/data/graphs/*
+**/data/src_files/*
 
 # embeddings
-models/**
+models/*
 
