@@ -15,7 +15,7 @@ Installation
 Python Packages
 ###############
 
-From requrements.txt
+From requirements.txt
 ^^^^^^^^^^^^^^^^^^^^
 
 One option is to install from the requirements.txt file. This can be done with conda with the
@@ -52,9 +52,33 @@ with the default installation of Joern.
 
 Instructions
 ------------
-Run ``python main.py -h`` for help. The first positional argument is the scope of the data used, either the 
-full dataset or a sample. The second positional argument specifies whether you are preparing the data or 
-running the model. Thus, you can run ``python main.py sample prepare`` to prepare the sample dataset, and then
-run ``python main.py sample model flat`` for the baseline model described in the paper, or 
-``python main.py sample model devign`` for the Devign model. Alternatively, you can run
-``python main.py sample model flat --rebuild`` to both prepare the sample data and run the model.
+
+Setup
+#####
+
+Upon first pulling the project, run ``python main.py setup`` to set up project directories
+that will be used for storing unpacked data and embedding models.
+
+Running Processes
+#################
+
+Run ``python main.py run -h`` for help. A sample dataset has been split off of the main
+dataset to verify that things are set up properly and to assess runtime. Training on this
+dataset uses fewer epochs.
+
+Running Joern and training Devign on the full dataset takes a few hours on an RTX 2070 Super.
+
+Preparing The Data
+^^^^^^^^^^^^^^^^^^
+
+To prepare the data, unpacking the dataset and running Joern to create the graphs, 
+run ``python main.py run sample prepare`` for the sample data or 
+``python main.py run full prepare`` for the full dataset. Data preparation can also be
+combined with training by running the model with ``--rebuild``.
+
+Running The Model
+^^^^^^^^^^^^^^^^^ 
+If the corresponding data has been prepared, run
+``python main.py run sample model flat`` or ``python main.py run full model flat`` for the baseline model described in the paper, or 
+``python main.py run sample model devign`` for the Devign model. Alternatively, you can run
+``python main.py run sample model flat --rebuild`` to both prepare the sample data and run the model.

@@ -45,7 +45,7 @@ def main(args):
         return process_joern_error(test_build)
     # Lightning training
     trainer = pl.Trainer(gpus= 1 if torch.cuda.is_available() else 0,
-                         max_epochs= 1,# if test_build else 200
+                         max_epochs= 5 if data_kwargs['test_build'] else 200,
                          log_every_n_steps = 10 if data_kwargs['test_build'] else 50)
     train_dataloader = data_module.train_dataloader()
     val_dataloader = data_module.val_dataloader()
