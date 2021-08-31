@@ -1,4 +1,4 @@
-from . import DatasetBuilder, JoernExeError
+from src.prepare import DatasetBuilder, JoernExeError
 
 import os
 import pytorch_lightning as pl

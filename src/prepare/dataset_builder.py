@@ -1,4 +1,4 @@
-from ..utils import PROJECT_ROOT
+from src.utils import PROJECT_ROOT
 
 import gensim
 import json

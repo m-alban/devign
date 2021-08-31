@@ -1,5 +1,5 @@
-from . import GGNNFlatSum, Devign
-from ..metrics import BinarySensitivity
+from src.model import GGNNFlatSum, Devign
+from src.metrics import BinarySensitivity
 
 import torch
 import torch.nn as nn
