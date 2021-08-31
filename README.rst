@@ -3,10 +3,7 @@ Partial Implementation of Devign
 
 This is a partial implementation of the *Devign* model, a graph neural network
 based model that identifies vulnerabilities in functions written in the C
-programming language. The paper can be found at `DeepAI 
-<https://deepai.org/publication/devign-effective-vulnerability-identification-by-learning-comprehensive-program-semantics-via-graph-neural-networks>`_
-or on `arXiv 
-<https://arxiv.org/abs/1909.03496>`_.
+programming language. The `paper <https://papers.nips.cc/paper/2019/hash/49265d2447bc3bbfe9e76306ce40a31f-Abstract.html>`_. 
 The `dataset <https://sites.google.com/view/devign>`_.
 
 Installation
@@ -82,3 +79,8 @@ If the corresponding data has been prepared, run
 ``python main.py run sample model flat`` or ``python main.py run full model flat`` for the baseline model described in the paper, or 
 ``python main.py run sample model devign`` for the Devign model. Alternatively, you can run
 ``python main.py run sample model flat --rebuild`` to both prepare the sample data and run the model.
+
+Citation
+--------
+
+``@inproceedings{NEURIPS2019_49265d24,author = {Zhou, Yaqin and Liu, Shangqing and Siow, Jingkai and Du, Xiaoning and Liu, Yang}, booktitle = {Advances in Neural Information Processing Systems},editor = {H. Wallach and H. Larochelle and A. Beygelzimer and F. d\textquotesingle Alch\'{e}-Buc and E. Fox and R. Garnett}, pages = {}, publisher = {Curran Associates, Inc.}, title = {Devign: Effective Vulnerability Identification by Learning Comprehensive Program Semantics via Graph Neural Networks}, url = {https://proceedings.neurips.cc/paper/2019/file/49265d2447bc3bbfe9e76306ce40a31f-Paper.pdf}, volume = {32},year = {2019}}``
